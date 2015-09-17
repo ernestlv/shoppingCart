@@ -1,0 +1,20 @@
+<div class="inventory">
+	<h1>Sugar Sweet Chocolate Treats</h1>
+	<ul class="items">
+		<li class="header">
+			<div class="info">
+				<span class="cell">Type / Description</span>
+				<span class="cell">Price</span>
+				<span class="cell"><a href="#/cart">view cart</a> # of items: <span>{{cart.count}}</span></a></span>
+			</div>
+		</li>
+		<li ng-repeat="item in chocolateList">
+		    <div class="info">
+    			<span class="type cell">{{item.type}}</span>
+     			<span class="price cell">{{item.price | currency}}</span>
+     			<span class="cell"><button href="#" ng-click="addToCart(item)">Add To Cart</button></span>
+     		</div>
+     		<p class="desc">{{item.description}}</p>
+		</li>
+	</ul>
+</div>

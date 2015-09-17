@@ -1,0 +1,20 @@
+{
+  "name": "stride",
+  "version": "1",
+  "authors": [],
+  "description": "stride test",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "underscore": "~1.8.3",
+    "angular-route": "~1.4.5"
+  }
+}

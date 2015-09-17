@@ -1,0 +1,27 @@
+<div class="cart">
+	<h1>Your Cart</h1>
+	<div class="empty" ng-if="isCartEmpty()">
+		<p>There are no items in your cart</p>
+		<button ng-click="closeCart()">close</button>
+	</div>
+	<div ng-if="!isCartEmpty()">
+    	<ul class="items">
+    		<li class="header">
+    			<span class="cell">Item</span>
+	    		<span class="cell">Price</span>
+	    		<span class="cell">Qty</span>
+    		</li>
+    		<li ng-repeat="item in cart.items">
+    			<span class="type cell">{{item.type}}</span>
+		    	<span class="price cell">{{item.price | currency}}</span>
+		    	<span class="qty cell">{{item.count}}</span>
+		    	<span class="cell"><button ng-click="removeItem(item)">Remove</button></span>
+    		</li>
+    	</ul>
+    	<p>Total: <span>{{cart.total | currency}}</span></p>
+    </div>
+    <div class="footer" ng-if="!isCartEmpty()">
+		<button class="clear" ng-click="clearCart()">clear</button>
+		<button class="close" ng-click="closeCart()">close</button>
+	</div>	
+</div>
